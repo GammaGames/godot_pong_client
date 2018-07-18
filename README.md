@@ -1,4 +1,4 @@
-To run this project and connect to the docker server, run the following commands (on Ubuntu, commands might vary by system):
+This is a basic example of running a godot headless server through Docker. It clones another repo (GammaGames/godot_pong_server) and runs the server inside an image.
 
 Downloading the docker image
 ---
@@ -16,3 +16,7 @@ Connecting to the server
 3. Press F5 or run lobby.tscn
 4. Enter the IP that we got while installing the server into the text input and click connect
 5. You should be connected to a very basic server hosted on docker
+
+The image shuts down when the player disconnects
+
+![alt text](https://github.com/GammaGames/godot_pong_client/raw/master/image.png)
