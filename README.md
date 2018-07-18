@@ -20,3 +20,19 @@ Connecting to the server
 The image shuts down when the player disconnects
 
 ![alt text](https://github.com/GammaGames/godot_pong_client/raw/master/image.png)
+
+The full dockerimage is:
+
+```
+FROM ubuntu
+
+WORKDIR .
+
+RUN apt-get update && apt-get install -y git && git clone https://github.com/GammaGames/godot_pong_server.git
+
+WORKDIR /godot_pong_server/multiplayer_pong
+
+EXPOSE 8910
+
+CMD ["./../Godot_v3.0.5-stable_linux_server.64",  "lobby.tscn"]
+```
